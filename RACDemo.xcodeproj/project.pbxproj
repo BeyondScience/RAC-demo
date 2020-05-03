@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		487A7700245EDAE300CB6F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487A76FF245EDAE300CB6F35 /* Assets.xcassets */; };
 		487A7703245EDAE300CB6F35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487A7701245EDAE300CB6F35 /* LaunchScreen.storyboard */; };
 		487A7706245EDAE300CB6F35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A7705245EDAE300CB6F35 /* main.m */; };
+		487A770F245EFE9100CB6F35 /* MykBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A770E245EFE9100CB6F35 /* MykBaseViewController.m */; };
+		487A7712245EFEC300CB6F35 /* MykCommonMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A7711245EFEC300CB6F35 /* MykCommonMacroViewController.m */; };
 		E2A77C4B9611517658DD9AE9 /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9901DF0F35559D7D403CABF /* Pods_RACDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,11 @@
 		487A7702245EDAE300CB6F35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		487A7704245EDAE300CB6F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487A7705245EDAE300CB6F35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		487A770D245EFE9100CB6F35 /* MykBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MykBaseViewController.h; sourceTree = "<group>"; };
+		487A770E245EFE9100CB6F35 /* MykBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MykBaseViewController.m; sourceTree = "<group>"; };
+		487A7710245EFEC300CB6F35 /* MykCommonMacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MykCommonMacroViewController.h; sourceTree = "<group>"; };
+		487A7711245EFEC300CB6F35 /* MykCommonMacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MykCommonMacroViewController.m; sourceTree = "<group>"; };
+		487A7713245F00AF00CB6F35 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BAF00584F7A83E960FAC3B84 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F9901DF0F35559D7D403CABF /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,7 +57,6 @@
 				3ACB40D3C25588310057F2D2 /* Pods-RACDemo.debug.xcconfig */,
 				BAF00584F7A83E960FAC3B84 /* Pods-RACDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,6 +81,7 @@
 		487A76F2245EDADE00CB6F35 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				487A770C245EEDAE00CB6F35 /* ItemsVcs */,
 				487A76F3245EDADE00CB6F35 /* AppDelegate.h */,
 				487A76F4245EDADE00CB6F35 /* AppDelegate.m */,
 				487A76F9245EDADE00CB6F35 /* ViewController.h */,
@@ -84,8 +91,20 @@
 				487A7701245EDAE300CB6F35 /* LaunchScreen.storyboard */,
 				487A7704245EDAE300CB6F35 /* Info.plist */,
 				487A7705245EDAE300CB6F35 /* main.m */,
+				487A7713245F00AF00CB6F35 /* PrefixHeader.pch */,
 			);
 			path = RACDemo;
+			sourceTree = "<group>";
+		};
+		487A770C245EEDAE00CB6F35 /* ItemsVcs */ = {
+			isa = PBXGroup;
+			children = (
+				487A770D245EFE9100CB6F35 /* MykBaseViewController.h */,
+				487A770E245EFE9100CB6F35 /* MykBaseViewController.m */,
+				487A7710245EFEC300CB6F35 /* MykCommonMacroViewController.h */,
+				487A7711245EFEC300CB6F35 /* MykCommonMacroViewController.m */,
+			);
+			path = ItemsVcs;
 			sourceTree = "<group>";
 		};
 		78FD422383E5C55FE92CE585 /* Frameworks */ = {
@@ -210,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487A7712245EFEC300CB6F35 /* MykCommonMacroViewController.m in Sources */,
 				487A76FB245EDADE00CB6F35 /* ViewController.m in Sources */,
+				487A770F245EFE9100CB6F35 /* MykBaseViewController.m in Sources */,
 				487A76F5245EDADE00CB6F35 /* AppDelegate.m in Sources */,
 				487A7706245EDAE300CB6F35 /* main.m in Sources */,
 			);

@@ -12,6 +12,8 @@
 
 @property (nonatomic) UITableView *tabView;
 
+@property (nonatomic, copy) NSArray <NSString *>*arrData;
+
 @end
 
 @implementation ViewController
@@ -19,22 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.arrData = @[@"常见宏"];
+    
     self.tabView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tabView.dataSource = self;
     self.tabView.delegate = self;
     [self.tabView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    NSLog(@"111");
     [self.view addSubview:self.tabView];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.arrData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
+    cell.textLabel.text = self.arrData[indexPath.row];
+    
     return cell;
 }
+
+
 
 @end
