@@ -23,6 +23,7 @@
     self.tabView.dataSource = self;
     self.tabView.delegate = self;
     [self.tabView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    NSLog(@"111");
     [self.view addSubview:self.tabView];
 }
 
