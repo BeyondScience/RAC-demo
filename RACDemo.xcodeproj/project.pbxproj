@@ -15,6 +15,8 @@
 		487A7706245EDAE300CB6F35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A7705245EDAE300CB6F35 /* main.m */; };
 		487A770F245EFE9100CB6F35 /* MykBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A770E245EFE9100CB6F35 /* MykBaseViewController.m */; };
 		487A7712245EFEC300CB6F35 /* MykCommonMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A7711245EFEC300CB6F35 /* MykCommonMacroViewController.m */; };
+		487A7716246027C100CB6F35 /* MykRacCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A7715246027C100CB6F35 /* MykRacCommandViewController.m */; };
+		487A77192460297C00CB6F35 /* MykRacSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A77182460297C00CB6F35 /* MykRacSignalViewController.m */; };
 		E2A77C4B9611517658DD9AE9 /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9901DF0F35559D7D403CABF /* Pods_RACDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,10 @@
 		487A7710245EFEC300CB6F35 /* MykCommonMacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MykCommonMacroViewController.h; sourceTree = "<group>"; };
 		487A7711245EFEC300CB6F35 /* MykCommonMacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MykCommonMacroViewController.m; sourceTree = "<group>"; };
 		487A7713245F00AF00CB6F35 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		487A7714246027C100CB6F35 /* MykRacCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MykRacCommandViewController.h; sourceTree = "<group>"; };
+		487A7715246027C100CB6F35 /* MykRacCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MykRacCommandViewController.m; sourceTree = "<group>"; };
+		487A77172460297C00CB6F35 /* MykRacSignalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MykRacSignalViewController.h; sourceTree = "<group>"; };
+		487A77182460297C00CB6F35 /* MykRacSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MykRacSignalViewController.m; sourceTree = "<group>"; };
 		BAF00584F7A83E960FAC3B84 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F9901DF0F35559D7D403CABF /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +109,10 @@
 				487A770E245EFE9100CB6F35 /* MykBaseViewController.m */,
 				487A7710245EFEC300CB6F35 /* MykCommonMacroViewController.h */,
 				487A7711245EFEC300CB6F35 /* MykCommonMacroViewController.m */,
+				487A77172460297C00CB6F35 /* MykRacSignalViewController.h */,
+				487A77182460297C00CB6F35 /* MykRacSignalViewController.m */,
+				487A7714246027C100CB6F35 /* MykRacCommandViewController.h */,
+				487A7715246027C100CB6F35 /* MykRacCommandViewController.m */,
 			);
 			path = ItemsVcs;
 			sourceTree = "<group>";
@@ -230,8 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				487A7712245EFEC300CB6F35 /* MykCommonMacroViewController.m in Sources */,
+				487A77192460297C00CB6F35 /* MykRacSignalViewController.m in Sources */,
 				487A76FB245EDADE00CB6F35 /* ViewController.m in Sources */,
 				487A770F245EFE9100CB6F35 /* MykBaseViewController.m in Sources */,
+				487A7716246027C100CB6F35 /* MykRacCommandViewController.m in Sources */,
 				487A76F5245EDADE00CB6F35 /* AppDelegate.m in Sources */,
 				487A7706245EDAE300CB6F35 /* main.m in Sources */,
 			);
@@ -376,6 +388,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 285RL6RTLB;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RACDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = RACDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -394,6 +408,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 285RL6RTLB;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RACDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = RACDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

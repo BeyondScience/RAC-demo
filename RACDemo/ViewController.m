@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MykCommonMacroViewController.h"//常见宏定义
+#import "MykRacSignalViewController.h"
+#import "MykRacCommandViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -21,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.arrData = @[@"常见宏"];
+    self.arrData = @[@"常见宏",@"RacSignal",@"RACCommand"];
     
     self.tabView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tabView.dataSource = self;
@@ -41,6 +44,17 @@
     cell.textLabel.text = self.arrData[indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+        [self.navigationController pushViewController:[MykCommonMacroViewController new] animated:YES];
+    }else if (indexPath.row == 1){
+        [self.navigationController pushViewController:[MykRacSignalViewController new] animated:YES];
+    }else if (indexPath.row == 2){
+        [self.navigationController pushViewController:[MykRacCommandViewController new] animated:YES];
+    }
 }
 
 
